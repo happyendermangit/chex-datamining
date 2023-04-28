@@ -1,4 +1,2 @@
 # chex-datamining
-Testing datamining 
-
-this works!
+This is the dataminer of chex!

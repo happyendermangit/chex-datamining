@@ -1,7 +1,7 @@
 'use strict';
 WebpackRequire.r(t), WebpackRequire.d(t, {
   default: function() {
-    return _;
+    return f;
   }
 });
 var Chunk37983 = WebpackRequire('37983');
@@ -9,88 +9,82 @@ WebpackRequire('884691');
 var Chunk414456 = WebpackRequire('414456'),
   r = WebpackRequire.n(s),
   Chunk414055 = WebpackRequire('414055'),
-  Chunk996554 = WebpackRequire('996554'),
   Chunk486952 = WebpackRequire('486952'),
   Chunk988268 = WebpackRequire('988268'),
   Chunk782340 = WebpackRequire('782340'),
   Chunk647431 = WebpackRequire('647431');
-let f = e => {
+let c = e => {
   let t,
-    {invertColor: n =!1, type: s = u.BotTagTypes.BOT, className: f, verified: _, hideIcon: h =!1, useRemSizes: g =!1, children: m = []} = e,
-    E = null,
-    p = d.default.Messages.VERIFIED_BOT_TOOLTIP,
-    {enabled: v} = o.AppLauncherOnboardingExperiment.useExperiment({
-      location: 'Bot Tag'
-    }, {
-      autoTrackExposure: !1
-    });
+    {invertColor: n =!1, type: s = Chunk988268.BotTagTypes.BOT, className: c, verified: f, hideIcon: _ =!1, useRemSizes: h =!1, children: g = []} = e,
+    m = null,
+    E = Chunk782340.default.Messages.VERIFIED_BOT_TOOLTIP;
   switch (s) {
-    case u.BotTagTypes.SYSTEM_DM:
-    case u.BotTagTypes.OFFICIAL:
-      _ = !0, p = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, E = d.default.Messages.SYSTEM_DM_TAG_SYSTEM;
+    case Chunk988268.BotTagTypes.SYSTEM_DM:
+    case Chunk988268.BotTagTypes.OFFICIAL:
+      f = !0, E = Chunk782340.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, m = Chunk782340.default.Messages.SYSTEM_DM_TAG_SYSTEM;
       break;
-    case u.BotTagTypes.SERVER:
-      E = d.default.Messages.BOT_TAG_SERVER;
+    case Chunk988268.BotTagTypes.SERVER:
+      m = Chunk782340.default.Messages.BOT_TAG_SERVER;
       break;
-    case u.BotTagTypes.ORIGINAL_POSTER:
-      E = d.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER;
+    case Chunk988268.BotTagTypes.ORIGINAL_POSTER:
+      m = Chunk782340.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER;
       break;
-    case u.BotTagTypes.STAFF_ONLY_DM:
-      E = d.default.Messages.STAFF_BADGE_TOOLTIP;
+    case Chunk988268.BotTagTypes.STAFF_ONLY_DM:
+      m = Chunk782340.default.Messages.STAFF_BADGE_TOOLTIP;
       break;
-    case u.BotTagTypes.AI:
-      _ = !0, p = d.default.Messages.AI_GENERATED_TOOLTIP, E = d.default.Messages.AI_TAG;
+    case Chunk988268.BotTagTypes.AI:
+      f = !0, E = Chunk782340.default.Messages.AI_GENERATED_TOOLTIP, m = Chunk782340.default.Messages.AI_TAG;
       break;
-    case u.BotTagTypes.REMIX:
-      _ = !1, E = d.default.Messages.REMIXING_TAG;
+    case Chunk988268.BotTagTypes.REMIX:
+      f = !1, m = Chunk782340.default.Messages.REMIXING_TAG;
       break;
-    case u.BotTagTypes.BOT:
+    case Chunk988268.BotTagTypes.BOT:
     default:
-      E = v ? d.default.Messages.APP_TAG : d.default.Messages.BOT_TAG_BOT;
+      m = Chunk782340.default.Messages.BOT_TAG_BOT;
   }
-  let S = s === u.BotTagTypes.ORIGINAL_POSTER,
-    T = s === u.BotTagTypes.REMIX,
-    I = null;
-  _ && (I = (0, i.jsx)(a.Tooltip, {
-    text: p,
+  let p = s === Chunk988268.BotTagTypes.ORIGINAL_POSTER,
+    v = s === Chunk988268.BotTagTypes.REMIX,
+    S = null;
+  f && (S = (0, Chunk37983.jsx)(Chunk414055.Tooltip, {
+    text: E,
     align: 'center',
     position: 'top',
-    children: e => (0, i.jsx)(l.default, {
+    children: e => (0, Chunk37983.jsx)(Chunk486952.default, {
       ...e,
-      className: c.botTagVerified
+      className: Chunk647431.botTagVerified
     })
-  })), t = s === u.BotTagTypes.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular;
-  let C = e => (0, i.jsxs)('span', {
+  })), t = s === Chunk988268.BotTagTypes.AI ? Chunk647431.botTagAI : n ? Chunk647431.botTagInvert : Chunk647431.botTagRegular;
+  let T = e => (0, Chunk37983.jsxs)('span', {
     ...e,
-    className: r(f, t, g ? c.rem : c.px, {
-      [c.botTagOP]: S,
-      [c.botTagRemix]: T
+    className: r(c, t, h ? Chunk647431.rem : Chunk647431.px, {
+      [Chunk647431.botTagOP]: p,
+      [Chunk647431.botTagRemix]: v
     }),
     children: [
-      h ? null : I,
-      m,
-      (0, i.jsx)('span', {
-        className: c.botText,
-        children: E
+      _ ? null : S,
+      g,
+      (0, Chunk37983.jsx)('span', {
+        className: Chunk647431.botText,
+        children: m
       })
     ]
   });
   switch (s) {
-    case u.BotTagTypes.REMIX:
-      return (0, i.jsx)(a.Tooltip, {
-        text: d.default.Messages.REMIXING_DOWNLOAD_APP,
+    case Chunk988268.BotTagTypes.REMIX:
+      return (0, Chunk37983.jsx)(Chunk414055.Tooltip, {
+        text: Chunk782340.default.Messages.REMIXING_DOWNLOAD_APP,
         position: 'top',
-        children: e => C(e)
+        children: e => T(e)
       });
-    case u.BotTagTypes.ORIGINAL_POSTER:
-      return (0, i.jsx)(a.Tooltip, {
-        text: d.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
+    case Chunk988268.BotTagTypes.ORIGINAL_POSTER:
+      return (0, Chunk37983.jsx)(Chunk414055.Tooltip, {
+        text: Chunk782340.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
         position: 'top',
-        children: e => C(e)
+        children: e => T(e)
       });
     default:
-      return C();
+      return T();
   }
 };
-f.Types = u.BotTagTypes;
-var _ = f;
+c.Types = Chunk988268.BotTagTypes;
+var f = c;
